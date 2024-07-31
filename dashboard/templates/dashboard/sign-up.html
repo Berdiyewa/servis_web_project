@@ -1,0 +1,67 @@
+{% extends 'dashboard/base_sign.html' %}
+{% load static %}
+
+
+{% block content %}
+
+  <div class="container my-auto">
+    <div class="row">
+      <div class="col-lg-4 col-md-8 col-12 mx-auto">
+        <div class="card z-index-0 fadeIn3 fadeInBottom">
+          <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+          <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
+              <h4 class="text-white font-weight-bolder text-center mt-2 mb-0" >Agza bolmak</h4>
+              <p class="font-weight-bolder text-center">Özüňiz barada maglumaty ýazyň</p>
+            </div>
+            <div class="card-body">
+              <form role="form">
+                <div class="input-group input-group-outline mb-3">
+                  <label class="form-label">Ady</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-outline mb-3">
+                  <label class="form-label">Bellenen at</label>
+                  <input type="text" class="form-control">
+                </div>
+                <div class="input-group input-group-outline mb-3">
+                  <label class="form-label">Parol</label>
+                  <input type="password" class="form-control">
+                </div>
+                <div class="form-check form-check-info text-start ps-0">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                  <label class="form-check-label" for="flexCheckDefault">
+                    <a href="javascript:;" class="text-dark font-weight-bolder">Gizlinligi berjaý ederin.</a>
+                  </label>
+                </div>
+                <div class="text-center">
+                  <button type="button" class="btn btn-lg bg-gradient-primary btn-lg w-100 mt-4 mb-0">Agza bolmak</button>
+                </div>
+              </form>
+            </div>
+            <div class="card-footer text-center pt-0 px-lg-2 px-1">
+              <p class="mb-2 text-sm mx-auto">
+                Agzalygyň barmy?
+                <a href="{% url 'signin' %}" class="text-primary text-gradient font-weight-bold">Giriş</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="{% static 'dashboard/js/core/popper.min.js'%}"></script>
+  <script src="{% static 'dashboard/js/core/bootstrap.min.js'%}"></script>
+  <script src="{% static 'dashboard/js/plugins/perfect-scrollbar.min.js'%}"></script>
+  <script src="{% static 'dashboard/js/plugins/smooth-scrollbar.min.js'%}"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+{% endblock %}

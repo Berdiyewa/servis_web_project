@@ -1,0 +1,152 @@
+{% extends 'telecom/basse.html' %}
+{% load static %}
+
+{% block title %}
+Sorag-jogap gullugy
+{% endblock %}
+
+{% block content %}
+    <section class="hero-section d-flex justify-content-center align-items-center" id="{% url 'home' %}">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-12 mx-auto">
+                    <h1 class="text-white text-center">Elmydama siziň hyzmatyňyzda</h1>
+                    <h6 class="text-center">sorag-jogap gullugy</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-4 col-12 mb-4 mb-lg-0">
+                    <div class="custom-block bg-white shadow-lg">
+                        <a href="{% url 'detail' %}">
+                            <div class="d-flex">
+                                <div>
+                                    <h5 class="mb-2">S-J gullugy</h5>
+                                    <p class="mb-0">Birikdiren hyzmatyňyzda näsazlyk ýüze çykan bolsa, haýal etmän bize habar beriň!</p>
+                                </div>
+                            </div>
+                            <img src="{% static 'telecom/images/topics/is.png' %}" class="custom-block-image img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-12">
+                    <div class="custom-block custom-block-overlay">
+                        <div class="d-flex flex-column h-100">
+                            <img src="{% static 'telecom/images/businesswoman-using-tablet-analysis.jpg' %}" class="custom-block-image img-fluid" alt="">
+                            <div class="custom-block-overlay-text d-flex">
+                                <div>
+                                    <h5 class="text-white mb-2">Telecom</h5>
+                                    <p class="text-white"><br>Telecom-yň hyzmatlaryny birikdirmek isleýän bolsaňyz, <br>bu hyzmatlar bilen tanyşyp bilersiňiz.</br></br></p>
+                                        <a href="https://telecom.tm/tk/" class="btn custom-btn mt-2 mt-lg-3">Saýta geçiň</a>
+                                </div>
+                            </div>
+                            <div class="section-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section section-padding" id="#{% url 'home' %} section_2">
+        <div class="section-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="text-white mb-4">Gullugyň işleýşi</h1>
+                </div>
+                <div class="col-lg-10 col-12 mx-auto">
+                    <div class="timeline-container">
+                        <ul class="vertical-scrollable-timeline" id="vertical-scrollable-timeline">
+                            <div class="list-progress">
+                                <div class="inner"></div>
+                            </div>
+                            <li>
+                                <h4 class="text-white mb-3">Bellige almak</h4>
+                                <p class="text-white">Birikdirilen hyzmatlarda näsazlyklar ýüze çykan ýagdaýynda bize ýüz tutanyňyzdan soň bellige alynýar.</p>
+                                <div class="icon-holder">
+                                    <i class="bi-card-checklist"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="text-white mb-3">Degişli bölümine habar bermek</h4>
+                                <p class="text-white">Näsazlygyň görnüşine görä degişli bölümine habar berilýär.</p>
+                                <div class="icon-holder" >
+                                    <i class="bi-headset"></i>
+                                </div>
+                            </li>
+                            <li>
+                                <h4 class="text-white mb-3">Müşderiniň talaby ýerine ýetirilýär</h4>
+                                <p class="text-white">Bellenen wagtda hünärmenimiz baryp, ýüze çykan näsazlygy bejerýär.</p>
+                                <div class="icon-holder">
+                                    <i class="bi-check2-square"></i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section section-padding" id="#{% url 'home' %} section_3">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="mb-4">Faktlar</h1>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-5 col-12">
+                    <img src="{% static 'telecom/images/fakt.png' %}" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-6 col-12 m-auto">
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                Çagyryş merkezi (call center)?
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    <strong>Çagyryş merkezi (call center)</strong>  haýyşlary gaýtadan işlemek we müşderi guramasynyň ýa-da esasy guramanyň bähbidine ses aragatnaşygy kanallary arkaly habar bermek bilen meşgullanýan ýöriteleşdirilen gurama ýa-da ýörite bölümdir.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                Çagyryş merkeziniň dörän wagty?
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Çagyryşy gaýtadan işlemek ukyby bolan ilkinji telefon kompaniýalarynyň 70 ýyl ozal peýda bolandygyny eşidip geň galyp bilersiňiz. Şol döwür üçin ösen awtomatiki jaň paýlaýjylaryny iki setire ulandylar: çykýan we gelýän jaňlar. Netijede, şular ýaly kompaniýalaryň tehnologiki enjamlary köpeldi, ýöne jaň merkeziniň düşünjesi üýtgemedi.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    AŞTU barada maglumat...
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                    Aşgabat şäher telefon ulgamy ýapyk görnüşli paýdarlar jemgyýeti barada maglumaty indiki ssylka geçip okap bilersiňiz
+                                    <a href="https://astu.tm/about-us" class="site-footer-link">
+                                        https://astu.tm/about-us
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

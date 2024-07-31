@@ -1,0 +1,68 @@
+{% extends 'telecom/basse.html' %}
+{% load static %}
+
+{% block title %}
+Sorag-jogap gullugy
+{% endblock %}
+
+{% block content %}
+
+    <header class="site-header d-flex flex-column justify-content-center align-items-center">
+        <div class="container">
+            <div class="row justify-content-center align-items-center">
+                <div class="col-lg-5 col-12 mb-5">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Baş sahypa</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">S-J gullugy</li>
+                        </ol>
+                    </nav>
+                    <h2 class="text-white">Sorag-jogap gullugy <br> siziň hyzmatyňyzda</h2>
+                </div>
+                <div class="col-lg-5 col-12">
+                    <div class="topics-detail-block bg-white shadow-lg">
+                        <img src="{% static 'telecom/images/topics/is.png' %}" class="topics-detail-block-image img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section-padding section-bg">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-12">
+                    <img src="{% static 'telecom/images/247.png' %}" class="newsletter-image img-fluid" alt="">
+                </div>
+                <div class="col-lg-5 col-12 subscribe-form-wrap d-flex justify-content-center align-items-center">
+                    <form class="custom-form subscribe-form"  method="post">
+                        <h4 class="mb-4 pb-2">Näsazlyklary beýan ediň</h4>
+
+
+
+                        <div class="row justify-content-center align-items-center">
+                            {% csrf_token %}
+                            {{ form.as_p }}
+                            <!-- {{ form.hyzmat }}<br>
+                            {{ form.sahs }}<br>
+                            {{ form.ady }}<br>
+                            {{ form.salgy }}<br>
+                            {{ form.mobil_belgi }}<br>
+                            {{ form.telefon_belgi }}<br>
+                            {{ form.mesele }}<br>
+                            {{ form.sene }}<br> -->
+
+
+                        </div>
+                        <div class="col-lg-12 col-12">
+
+                            <button type="submit" class="btn btn-success">Iberiň</button>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
